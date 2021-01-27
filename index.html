@@ -49,6 +49,27 @@
         //         }
         //     }
         // }
+        function bilprima(bil){
+                for (let i = 0; i <= bil; i++) {
+                let flag = 0;
+
+                // Loop hingga angka yang diberikan user
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        flag = 1;
+                        break; //bila ternyata angka dari user hasil pembagiannya adalah 0 maka dia bukan bilangan prima sehinga tidak ikut di print karena tidak masuk syarat kondisional selanjutnya 
+                    }
+                }
+
+                // 
+                if (i > 1 && flag == 0) {
+                    console.log(i);
+                    }   
+                }
+            }
+        
+
+
         // function hariesok(hari){
         //     switch (hari){
         //         case "senin":
@@ -84,9 +105,11 @@
             else if (hari=="sabtu"){hari="minggu";}
             else if (hari=="minggu"){hari="senin";}
             console.log(hari);
+            const lokasi = document.querySelector('#maka');
+            const isi = document.createTextNode('Maka besok hari '+hari)
+            lokasi.appendChild(isi)
         }
     </script>
-
 <p>masukan angka, nanti kutunjukin deret bilangannya, sesuai dengan dia ganjil atau genap</p>
     <p><input type="text" id="gangen"></p>
     <p><button id="btn1">enter</button></p>
@@ -98,6 +121,6 @@
     <p>jika sekarang hari</p>
     <p><input type="text" id="hari"></p>
     <p><button id="btn3">enter</button></p>
-    <p id="maka">maka besok hari lihat di konsol ya kak ahaha :v</p>
+    <p id="maka"></p>
 </body>
 </html>
