@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bilangan</title>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                let bil=$("#gangen").val();
+                bilgangen(bil);
+            })
+            $("#btn2").click(function(){
+                let bil=$("#prima").val();
+                bilprima(bil);
+            })
+            $("#btn3").click(function(){
+                let hari=$("#hari").val();
+                hariesok(hari);
+            });
+        });      
+    </script>
 </head>
 <body>
-    <!-- <script>
-        $(document).ready(function(){
-            $("#gangen").click(function(){
-                $(prompt("masukan angka, nanti kutunjukin deret bilangannya, sesuai dengan dia ganjil atau genap"));
-            })
-            $("#prima").click(function(){
-                $(prompt("masukan angka, nanti kutunjukin deret bilangannya primanya"));
-            })            
-        });  
-    </script> -->
+
     <script>
         function bilgangen(bil){
             if (bil%2 == 0){
@@ -30,39 +37,57 @@
                 }
             }
         }
-        function bilprima(bil){
-            if (bil == 2){
-                    console.log(bil);
-                }
-            else if (bil>1){
-                for(let i=2; i<bil; i++){
-                    if (bil%i == 0){
-                        console.log(i);
-                    }
-                }
+        // function bilprima(bil){
+        //     if (bil == 2){console.log(bil);}
+        //     else (bil>1){
+        //         console.log(2)
+        //         for(let i=2; i<=bil; i++){
+        //             if (i%2 !== 0 || i%3 !== 0 || i%5 !== 0 || i%7 !== 0){
+        //                 console.log(i);
+        //             }
+        //             else
+        //         }
+        //     }
+        // }
+        function hariesok(hari){
+            switch (hari){
+                case "senin":
+                    hari ="selasa";
+                    break;
+                case "selasa":
+                    hari ="rabu";
+                    break;
+                case "rabu":
+                    hari ="kamis";
+                    break;
+                case "kamis":
+                    hari ="jumat";
+                    break;
+                case "jumat":
+                    hari ="sabtu";
+                    break;
+                case "sabtu":
+                    hari ="minggu";
+                    break;
+                case "minggu":
+                    hari ="senin"; 
+                    break;                                      
             }
+            console.log(hari)
         }
     </script>
-    <script>
-        $(document).ready(function(){
-            $("#btn1").click(function(){
-                let bil=$("#gangen").val();
-                bilgangen(bil);
-            })
-            $("#btn2").click(function(){
-                let bil=$("#prima").val();
-                bilprima(bil);
-            })
-        })        
-    </script>
 
-    <!-- <a id="gangen" href="#oddeven">deret bilangan ganjil/genap</a><br>
-    <a id="prima" href="#primes">deret bilangan prima</a> -->
-    <p>masukan angka, nanti kutunjukin deret bilangannya, sesuai dengan dia ganjil atau genap</p>
+<p>masukan angka, nanti kutunjukin deret bilangannya, sesuai dengan dia ganjil atau genap</p>
     <p><input type="text" id="gangen"></p>
     <p><button id="btn1">enter</button></p>
+   
     <p>masukan angka, nanti kutunjukin deret bilangan primanya</p>
     <p><input type="text" id="prima"></p>
     <p><button id="btn2">enter</button></p>
+   
+    <p>jika sekarang hari</p>
+    <p><input type="text" id="hari"></p>
+    <p><button id="btn3">enter</button></p>
+    <p id="maka">maka besok hari</p>
 </body>
 </html>
