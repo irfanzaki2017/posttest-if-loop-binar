@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bilangan</title>
 </head>
 <body>
+    <!-- <script>
+        $(document).ready(function(){
+            $("#gangen").click(function(){
+                $(prompt("masukan angka, nanti kutunjukin deret bilangannya, sesuai dengan dia ganjil atau genap"));
+            })
+            $("#prima").click(function(){
+                $(prompt("masukan angka, nanti kutunjukin deret bilangannya primanya"));
+            })            
+        });  
+    </script> -->
     <script>
-        
+        function bilgangen(bil){
+            if (bil%2 == 0){
+                for(let i=2; i<=bil; i++){
+                    if (i%2==0){console.log(i)}
+                }
+            }
+            else if (bil%2 !== 0){
+                for(let i=1; i<=bil; i++){
+                    if (i%2!==0){console.log(i)}
+                }
+            }
+        }
+        function bilprima(bil){
+            if (bil == 2){
+                    console.log(bil);
+                }
+            else if (bil>1){
+                for(let i=2; i<bil; i++){
+                    if (bil%i == 0){
+                        console.log(i);
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                let bil=$("#gangen").val();
+                bilgangen(bil);
+            })
+            $("#btn2").click(function(){
+                let bil=$("#prima").val();
+                bilprima(bil);
+            })
+        })        
     </script>
 
-    <a href="#oddeven">deret bilangan ganjil/genap</a><br>
-    <a href="#prima">deret bilangan prima</a>
+    <!-- <a id="gangen" href="#oddeven">deret bilangan ganjil/genap</a><br>
+    <a id="prima" href="#primes">deret bilangan prima</a> -->
+    <p>masukan angka, nanti kutunjukin deret bilangannya, sesuai dengan dia ganjil atau genap</p>
+    <p><input type="text" id="gangen"></p>
+    <p><button id="btn1">enter</button></p>
+    <p>masukan angka, nanti kutunjukin deret bilangan primanya</p>
+    <p><input type="text" id="prima"></p>
+    <p><button id="btn2">enter</button></p>
 </body>
 </html>
