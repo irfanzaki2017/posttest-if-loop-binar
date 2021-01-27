@@ -49,31 +49,41 @@
         //         }
         //     }
         // }
+        // function hariesok(hari){
+        //     switch (hari){
+        //         case "senin":
+        //             hari ="selasa";
+        //             break;
+        //         case "selasa":
+        //             hari ="rabu";
+        //             break;
+        //         case "rabu":
+        //             hari ="kamis";
+        //             break;
+        //         case "kamis":
+        //             hari ="jumat";
+        //             break;
+        //         case "jumat":
+        //             hari ="sabtu";
+        //             break;
+        //         case "sabtu":
+        //             hari ="minggu";
+        //             break;
+        //         case "minggu":
+        //             hari ="senin"; 
+        //             break;                                      
+        //     }
+        //     console.log(hari)
+        // }
         function hariesok(hari){
-            switch (hari){
-                case "senin":
-                    hari ="selasa";
-                    break;
-                case "selasa":
-                    hari ="rabu";
-                    break;
-                case "rabu":
-                    hari ="kamis";
-                    break;
-                case "kamis":
-                    hari ="jumat";
-                    break;
-                case "jumat":
-                    hari ="sabtu";
-                    break;
-                case "sabtu":
-                    hari ="minggu";
-                    break;
-                case "minggu":
-                    hari ="senin"; 
-                    break;                                      
-            }
-            console.log(hari)
+            if (hari=="senin"){hari="selasa";}
+            else if (hari=="selasa"){hari="rabu";}
+            else if (hari=="rabu"){hari="kamis";}
+            else if (hari=="kamis"){hari="jumat";}
+            else if (hari=="jumat"){hari="sabtu";}
+            else if (hari=="sabtu"){hari="minggu";}
+            else if (hari=="minggu"){hari="senin";}
+            console.log(hari);
         }
     </script>
 
@@ -88,6 +98,6 @@
     <p>jika sekarang hari</p>
     <p><input type="text" id="hari"></p>
     <p><button id="btn3">enter</button></p>
-    <p id="maka">maka besok hari</p>
+    <p id="maka">maka besok hari lihat di konsol ya kak ahaha :v</p>
 </body>
 </html>
